@@ -1,0 +1,39 @@
+Nome: Bruno Bronzati
+Id: 312226
+
+Exercicio da aula 2 - Parte 1:
+
+Identifique os tokens do programa abaixo conforme os padrões da linguagem ALGUMA. No campo ''valor'', armazene o lexema se necessario:
+
+:DECLARAÇÕES
+argumento: INTEIRO
+fatorial: INTEIRO
+:ALGORITMO
+% Calcula o fatorial de um numero inteiro
+LER argumento
+ATRIBUIR argumento A fatorial
+SE argumento = 0 ENTAO
+  ATRIBUIR 1 A fatorial
+ENQUANTO argumento > 1
+   INICIO
+       ATRIBUIR fatorial * (argumento -1) A fatorial
+       ATRIBUIR argumento -1 A argumento
+FIM
+
+-----------------------------------------------
+
+Resolução do exercicio:
+
+<Delim> <DEC>
+<Var,"argumento"> <Delim> <INT> 
+<Var, "fatorial"> <Delim> <INT>
+<Delim> <ALG>
+<LER> <Var,"argumento">
+<ATR> <Var,"argumento"> <A> <Var,"fatorial">
+<SE> <Var,"argumento"> <OpRel,"="> <Numl,"0"> <ENT>
+<ATR> <Numl,"1"> <A> <Var,"fatorial">
+<ENQ> <Var,"argumento"> <OpRel,">"> <Numl,"1"> 
+<INI>
+<ATR> <Var,"fatorial"> <OpArit,"*"> <AP> <Var,"argumento"> <OpArit,"-"> <Numl,"1"> <FP> <A> <Var,"fatorial">
+<ATR> <Var,"argumento"> <OpArit,"-"> <Numl,"1"> <A> <Var,"argumento">
+<EOF>
